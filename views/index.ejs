@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Comments</title>
+</head>
+
+<body>
+    <h1>All comments</h1>
+    <%= console.log(comments)%>
+        <ul>
+            <% for(let c of comments){ %>
+                <li><b>
+                        <%= c.username %>
+                    </b>-<%= c.comment %>
+                        <a href="/comments/<%= c.id %> "> Details </a>
+                </li>
+                <% } %>
+        </ul>
+        <a href="/comments/new">Add New Comment</a>
+</body>
+
+</html>
